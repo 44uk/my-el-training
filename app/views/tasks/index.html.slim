@@ -1,2 +1,18 @@
-h1 Tasks#index
-p Find me in app/views/tasks/index.html.slim
+table
+  tr
+    th タイトル
+    th 説明文
+    th ステータス
+    th 優先度
+    th 期限
+    th ラベル
+    th
+    th
+  - @tasks.each do |task|
+    tr
+      td= task.title
+      td= task.description
+      td= task.status
+      td= task.priority
+      td= task.deadline_at
+      td= task.label
