@@ -1,24 +1,22 @@
-# README
+# データ構造
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## モデル
 
-Things you may want to cover:
+### Task
 
-* Ruby version
+| name | type |
+| ---- | ---- |
+| title       | String |
+| description | Text   |
+| deadline_at | Datetime |
+| priority    | String |
+| status      | String |
+| label       | String |
+| user_id     | Integer |
 
-* System dependencies
+### User
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| name | type |
+| ---- | ---- |
+| id | String |
+| password | String |
