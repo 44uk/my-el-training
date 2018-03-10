@@ -1,0 +1,24 @@
+= link_to '登録', new_task_path
+
+p= flash[:notice]
+
+table
+  tr
+    th タイトル
+    th 説明文
+    th ステータス
+    th 優先度
+    th 期限
+    th ラベル
+    th
+    th
+  - @tasks.each do |task|
+    tr
+      td= task.title
+      td= task.description
+      td= task.status
+      td= task.priority
+      td= task.deadline_at
+      td= task.label
+      td= link_to '編集', edit_task_path(task)
+      td= link_to '削除', task, method: :delete, data: { confirm: 'Are you sure?' }
